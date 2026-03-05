@@ -461,7 +461,7 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  min-height: 108px;
+  min-height: 208px;
   justify-content: flex-end;
   background: #e5e5e5;
   border: 2.5px solid transparent;
