@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact Story Lounge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ SCREEN 1: Attractor ══ -->
+<div id="screen-attractor" class="screen active" onclick="goTo('screen-main')">
+  <div class="attractor-text">YOUR EXPERIENCE BEGINS HERE.</div>
+</div>
+
+<!-- ══ SCREEN 2: Main ══ -->
+<div id="screen-main" class="screen">
+  <div class="main-body">
+    <div class="main-left">
+      <div class="main-logo">
+        <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none">
+          <circle cx="22" cy="22" r="19" stroke="#FF6B47" stroke-width="2.5"/>
+          <circle cx="22" cy="22" r="11.5" stroke="#FF6B47" stroke-width="2"/>
+          <circle cx="22" cy="22" r="5" fill="#FF6B47"/>
+        </svg>
+        <div class="logo-wordmark">
+          <span class="logo-brand-name">Impact</span>
+          <span class="logo-sub">Health Sharing</span>
+        </div>
+      </div>
+      <div class="main-heading">WELCOME TO THE<br>IMPACT STORY LOUNGE</div>
+      <div class="main-section">
+        <div class="main-section-title">The Story Lounge</div>
+        <div class="main-section-body">Is an opportunity to...</div>
+      </div>
+      <div class="main-section">
+        <div class="main-section-title">A Unique VR Experience</div>
+        <div class="main-section-body">Answer a few questions to help us get to know you, so we can help find the right video experience for you today. Based on your selection, you'll watch a video within VR with your peers to learn more about how Impact can help you.</div>
+      </div>
+      <button class="main-get-started" onclick="goTo('screen-safety')">Get Started &nbsp;→</button>
+    </div>
+    <div class="main-right">
+      <div class="bg-img"></div>
+    </div>
+    <button class="main-cta-btn" onclick="goTo('screen-safety')">CUSTOMIZE YOUR EXPERIENCE &nbsp;→</button>
+  </div>
+  <div class="main-ticker">
+    <span>IT'S ACCESSIBLE</span>
+    <span>IT'S INCLUSIVE</span>
+    <span>IT'S COMPREHENSIVE</span>
+    <span>IT'S AFFORDABLE</span>
+  </div>
+</div>
+
+<!-- ══ SCREEN 3: VR Safety ══ -->
+<div id="screen-safety" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-safety"></div>
+    <div class="content">
+      <div class="content-title">VR safety guidelines</div>
+      <div class="img-block vr-safety-img">[ VR Headset Safety Photo ]</div>
+      <p class="content-body">Please watch the following safety video to understand how to handle the VR equipment. A staff member will assist you through the process.</p>
+      <p class="content-body">If you are prone to motion sickness, it is recommended to close your eyes for a few seconds. If the problem persists, please remove your headset temporarily until you feel well enough to return.</p>
+      <div class="checkbox-row" style="margin-top:28px">
+        <input type="checkbox" id="medical-check">
+        <label for="medical-check">If you are unable to use VR for any medical reason, please tap the following box to inform the staff.</label>
+      </div>
+      <div class="next-btn-wrap">
+        <button id="next-safety" class="next-btn enabled" onclick="goTo('screen-q1')">NEXT &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCREEN 4: Q1 — Demographics ══ -->
+<div id="screen-q1" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-q1"></div>
+    <div class="content">
+      <div class="content-title">Which category best represents you?</div>
+      <div class="card-grid">
+        <div class="option-card female" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#c06080" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+          <div class="card-label">18 – 30</div>
+        </div>
+        <div class="option-card female" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#c06080" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+          <div class="card-label">31 – 45</div>
+        </div>
+        <div class="option-card female" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#c06080" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+          <div class="card-label">46 – 65</div>
+        </div>
+        <div class="option-card female" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#c06080" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+          <div class="card-label">65+</div>
+        </div>
+        <div class="option-card male" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#2080a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="14" y1="10" x2="20" y2="4"/><polyline points="16,4 20,4 20,8"/></svg>
+          <div class="card-label">18 – 30</div>
+        </div>
+        <div class="option-card male" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#2080a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="14" y1="10" x2="20" y2="4"/><polyline points="16,4 20,4 20,8"/></svg>
+          <div class="card-label">31 – 45</div>
+        </div>
+        <div class="option-card male" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#2080a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="14" y1="10" x2="20" y2="4"/><polyline points="16,4 20,4 20,8"/></svg>
+          <div class="card-label">46 – 65</div>
+        </div>
+        <div class="option-card male" data-group="q1" onclick="selectCard(this,'q1','next-q1')">
+          <svg class="card-gender-icon" viewBox="0 0 24 24" fill="none" stroke="#2080a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="14" y1="10" x2="20" y2="4"/><polyline points="16,4 20,4 20,8"/></svg>
+          <div class="card-label">65+</div>
+        </div>
+      </div>
+      <div class="next-btn-wrap">
+        <button id="next-q1" class="next-btn" onclick="goTo('screen-q2')">NEXT &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCREEN 5: Q2 — Profession ══ -->
+<div id="screen-q2" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-q2"></div>
+    <div class="content">
+      <div class="content-title">What best describes your profession?</div>
+      <div class="card-grid">
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Medical Practitioner</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Full-Time Employee</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Part-Time Employee</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Self Employed</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Stay at Home Parent</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Gig Worker</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Unemployed</div></div>
+        <div class="option-card" data-group="q2" onclick="selectCard(this,'q2','next-q2')"><div class="card-label">Retired</div></div>
+      </div>
+      <div class="next-btn-wrap">
+        <button id="next-q2" class="next-btn" onclick="goTo('screen-q3')">NEXT &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCREEN 6: Q3 — Household ══ -->
+<div id="screen-q3" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-q3"></div>
+    <div class="content">
+      <div class="content-title">What best describes your household?</div>
+      <div class="card-grid">
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Living Alone</div></div>
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Live with Roommates</div></div>
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Live with Parents</div></div>
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Have a Young Family</div></div>
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Have a Matured Family</div></div>
+        <div class="option-card" data-group="q3" onclick="selectCard(this,'q3','next-q3')"><div class="card-label">Married</div></div>
+      </div>
+      <div class="next-btn-wrap">
+        <button id="next-q3" class="next-btn" onclick="goTo('screen-outcome')">NEXT &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCREEN 7: Outcome — Story Results ══ -->
+<div id="screen-outcome" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-outcome"></div>
+    <div class="content">
+      <div class="content-title">Your VR experience is now selected</div>
+      <div class="img-block rooftop-img">[ Rooftop Terrace Preview ]</div>
+      <p class="content-body">Based on your selection, here's a preview of your experience. The rooftop terrace is where your journey will begin.</p>
+      <p class="content-body" style="color:#aaa;">[Additional information]</p>
+      <div class="next-btn-wrap">
+        <button class="next-btn enabled" onclick="goTo('screen-final')">NEXT &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCREEN 8: Final — Step Inside ══ -->
+<div id="screen-final" class="screen">
+  <div class="layout">
+    <div class="sidebar" id="sidebar-final"></div>
+    <div class="content">
+      <div class="content-title">The story now begins</div>
+      <div class="vr-tips-layout">
+        <div class="vr-tips-main">
+          <div class="hotspot-wrap">
+            [ VR Headset — Tap to explore ]
+            <div class="hotspot" title="Lens adjustment"></div>
+            <div class="hotspot" title="Strap adjustment"></div>
+            <div class="hotspot" title="Power button"></div>
+            <div class="hotspot" title="Volume control"></div>
+          </div>
+          <p class="content-body">Please standby while the staff come collect you.</p>
+          <p class="content-body">While you wait, tap to explore the headset and the controls.</p>
+        </div>
+        <div class="vr-tips-panel">
+          <div class="vr-tips-title">VR Tips</div>
+          <div class="vr-tip"><strong>Adjust the headset</strong> — Make sure it's comfortable, not too tight, and lenses are aligned for clear vision.</div>
+          <div class="vr-tip"><strong>Check glasses fit</strong> — If you wear glasses, ensure the spacer (if available) is installed.</div>
+          <div class="vr-tip"><strong>Slow head turns</strong> — Quick movements can cause dizziness.</div>
+        </div>
+      </div>
+      <div class="next-btn-wrap">
+        <button class="next-btn enabled" onclick="restart()">START OVER &nbsp;↺</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
