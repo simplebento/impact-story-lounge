@@ -182,7 +182,7 @@ html, body {
   display: flex;
 }
 .sidebar {
-  width: 340px;
+  width: 408px;
   flex-shrink: 0;
   background: #0B2545;
   padding: 32px 36px 40px;
